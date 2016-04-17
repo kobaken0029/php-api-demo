@@ -41,7 +41,9 @@ if (isset($_GET['year']) && is_numeric($_GET['year'])) {
 
     if (isset($_GET['cour']) && is_numeric($_GET['cour'])) {
         $cour = $_GET['cour'];
-        $target_url .= '/'.$cour;
+        if (1 <= $cour && $cour <= 4) {
+            $target_url .= '/'.$cour;
+        }
     }
 }
 

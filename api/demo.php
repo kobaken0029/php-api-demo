@@ -21,4 +21,4 @@ $response = curl_exec($curl);
 $result = json_decode($response, true);
 curl_close($curl);
 
-var_dump($result);
+echo $result ?: [];

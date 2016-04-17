@@ -20,7 +20,7 @@ function createResult($target_url)
     curl_setopt_array($curl, $option);
 
     // 結果をjsonデコード
-    $result = json_decode(curl_exec($curl), true);
+    $result = curl_exec($curl);
 
     // curlを閉じる
     curl_close($curl);
@@ -45,4 +45,4 @@ if (isset($_GET['year']) && is_numeric($_GET['year'])) {
     }
 }
 
-var_dump(createResult($target_url));
+echo createResult($target_url);

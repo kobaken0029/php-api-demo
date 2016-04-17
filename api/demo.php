@@ -6,7 +6,7 @@
  * @param string $target_url APIのURL
  * @return array APIの結果
  */
-public function createResult($target_url)
+function createResult($target_url)
 {
     // curlオブジェクト初期化
     $curl = curl_init();

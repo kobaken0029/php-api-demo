@@ -45,4 +45,4 @@ if (isset($_GET['year']) && is_numeric($_GET['year'])) {
     }
 }
 
-echo createResult($target_url);
+var_dump(createResult($target_url));

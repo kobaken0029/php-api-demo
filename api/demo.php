@@ -4,9 +4,14 @@ header("Content-Type: application/json");
 
 $base_url = 'http://api.moemoe.tokyo/anime';
 
+$year = 2016;
+if (isset($_GET['year']) && is_numeric($_GET['year'])) {
+    $year = $_GET['year'];
+}
+
 $curl = curl_init();
 $option = [
-    CURLOPT_URL => $base_url.'/v1/master/2016',
+    CURLOPT_URL => $base_url.'/v1/master/'.$year,
     CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_RETURNTRANSFER => true
 ];

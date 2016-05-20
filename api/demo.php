@@ -47,4 +47,6 @@ if (isset($_GET['year']) && is_numeric($_GET['year'])) {
     }
 }
 
+sleep(5);
+
 echo createResult($target_url);
